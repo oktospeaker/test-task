@@ -10,11 +10,17 @@ https://habr.com/ru/company/true_engineering/blog/419817/
 
 
 namespace.yaml – Определяем пространство имен
+
 rbac.yaml - Права доступа для RabbitMQ. Создаём ServiceAccount с правами на чтение Endpoints K8s.
+
 pv.yaml – Хранилище данных. Взял самый простой случай — hostPath.
+
 pvc.yaml – Создаем Volume Claim на томе, созданном в pv.yaml. Этот Claim затем будет использоваться в StatefulSet как хранилище постоянных данных.
+
 service.yaml - Создаём внутренний headless сервис, через который будет работать Peer Discovery plugin.
+
 services.yaml - Для работы приложений в K8s с нашим кластером создаём сервис балансировщика. RabbitMQ будет доступен при обращении к любой ноде кластера k8s по портам 31672 и 30672.
+
 configmap.yaml, statefulset.yaml – Конфиги RabbitMQ
 
 
