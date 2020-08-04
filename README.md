@@ -9,19 +9,19 @@ https://github.com/rabbitmq/rabbitmq-peer-discovery-k8s
 https://habr.com/ru/company/true_engineering/blog/419817/
 
 
-namespace.yaml – Определяем пространство имен
+<b>namespace.yaml</b> – Определяем пространство имен
 
-rbac.yaml - Права доступа для RabbitMQ. Создаём ServiceAccount с правами на чтение Endpoints K8s.
+<b>rbac.yaml</b> - Права доступа для RabbitMQ. Создаём ServiceAccount с правами на чтение Endpoints K8s.
 
-pv.yaml – Хранилище данных. Взял самый простой случай — hostPath.
+<b>pv.yaml</b> – Хранилище данных. Взял самый простой случай — hostPath.
 
-pvc.yaml – Создаем Volume Claim на томе, созданном в pv.yaml. Этот Claim затем будет использоваться в StatefulSet как хранилище постоянных данных.
+<b>pvc.yaml</b> – Создаем Volume Claim на томе, созданном в pv.yaml. Этот Claim затем будет использоваться в StatefulSet как хранилище постоянных данных.
 
-service.yaml - Создаём внутренний headless сервис, через который будет работать Peer Discovery plugin.
+<b>service.yaml</b> - Создаём внутренний headless сервис, через который будет работать Peer Discovery plugin.
 
-services.yaml - Для работы приложений в K8s с нашим кластером создаём сервис балансировщика. RabbitMQ будет доступен при обращении к любой ноде кластера k8s по портам 31672 и 30672.
+<b>services.yaml</b> - Для работы приложений в K8s с нашим кластером создаём сервис балансировщика. RabbitMQ будет доступен при обращении к любой ноде кластера k8s по портам 31672 и 30672.
 
-configmap.yaml, statefulset.yaml – Конфиги RabbitMQ
+<b>configmap.yaml</b>, <b>statefulset.yaml</b> – Конфиги RabbitMQ
 
 
 После развертывания кластера необходимо приступить к беспростойной миграции данных из существующего нагруженного менеджера очередей RabbitMQ. Но это уже другая история.
