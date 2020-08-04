@@ -4,6 +4,7 @@
 Кластер RabbitMQ в k8s может быть сформирован используя механизм Kubernetes Peer Discovery Backend (начиная с версии 3.7.0), который поставляется в виде плагина в базовую поставку программного брокера сообщений. Репозиторий плагина на гитхабе - https://github.com/rabbitmq/rabbitmq-peer-discovery-k8s
 
 Далее формируем конфигурационные файлы, ссылаясь на рекомендации и официальную документацию от RabbitMQ, примеры из репозитория плагина, а также на описанный опыт деплоя:
+
 https://www.rabbitmq.com/cluster-formation.html#peer-discovery-k8s
 
 https://github.com/rabbitmq/rabbitmq-peer-discovery-k8s
