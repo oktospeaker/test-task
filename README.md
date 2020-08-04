@@ -5,7 +5,9 @@
 
 Далее формируем конфигурационные файлы, ссылаясь на рекомендации и официальную документацию от RabbitMQ, примеры из репозитория плагина, а также на описанный опыт деплоя:
 https://www.rabbitmq.com/cluster-formation.html#peer-discovery-k8s
+
 https://github.com/rabbitmq/rabbitmq-peer-discovery-k8s
+
 https://habr.com/ru/company/true_engineering/blog/419817/
 
 
