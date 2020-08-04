@@ -26,6 +26,9 @@ https://habr.com/ru/company/true_engineering/blog/419817/
 
 <b>configmap.yaml</b>, <b>statefulset.yaml</b> – Конфиги RabbitMQ
 
+Далее запуск по мануалу:
+
+https://github.com/rabbitmq/rabbitmq-peer-discovery-k8s/tree/master/examples/minikube#running-the-example-manually-with-minikube
 
 После развертывания кластера необходимо приступить к беспростойной миграции данных из существующего нагруженного менеджера очередей RabbitMQ. Но это уже другая история.
 
